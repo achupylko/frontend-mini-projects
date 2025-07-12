@@ -9,6 +9,7 @@
 | 01 | Button Hover Effect        | Анімація при наведенні на кнопку |
 | 02 | Loading Animation          | Простий лоадер на CSS        |
 | 03 | Responsive Navbar          | Адаптивна навігаційна панель |
+| 04 | After Underline Hover      | Анімована підсвітка знизу    |
 
 ## Технології
 - HTML

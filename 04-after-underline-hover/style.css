@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #1e1e1e;
+}
+
+.underline-btn {
+  position: relative;
+  background: none;
+  border: none;
+  color: #00ffd5;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.underline-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  background: #00ffd5;
+  transition: width 0.3s ease;
+}
+
+.underline-btn:hover::after {
+  width: 100%;
+}

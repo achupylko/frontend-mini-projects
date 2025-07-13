@@ -1,0 +1,24 @@
+body {
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.decorated-title {
+  position: relative;
+  font-size: 28px;
+  color: #333;
+  padding-left: 40px;
+}
+
+.decorated-title::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #f39c12;
+}

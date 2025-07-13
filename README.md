@@ -9,7 +9,9 @@
 | 01 | Button Hover Effect        | Анімація при наведенні на кнопку |
 | 02 | Loading Animation          | Простий лоадер на CSS        |
 | 03 | Responsive Navbar          | Адаптивна навігаційна панель |
-| 04 | After Underline Hover      | Анімована підсвітка знизу    |
+| 04 | Underline Hover Effect with ::after | Анімована підсвітка знизу    |
+| 05 | Decorative Title with ::before | Декоративний значок перед заголовком |
+| 06 | Inline SVG with ::hover | Кнопка з іконкою (інлайн SVG), яка змінює колір при наведенні |
 
 ## Технології
 - HTML

@@ -1,0 +1,36 @@
+body {
+  background: #f0f0f0;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: #999;
+  transition: fill 0.3s;
+}
+
+.icon-button:hover {
+  border-color: #f39c12;
+}
+
+.icon-button:hover .icon {
+  fill: #f39c12;
+}

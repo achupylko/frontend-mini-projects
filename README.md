@@ -12,6 +12,7 @@
 | 04 | Underline Hover Effect with ::after | Анімована підсвітка знизу    |
 | 05 | Decorative Title with ::before | Декоративний значок перед заголовком |
 | 06 | Inline SVG with ::hover | Кнопка з іконкою (інлайн SVG), яка змінює колір при наведенні |
+| 07 | CSS Grid Gallery | Адаптивна галерея з використанням `CSS Grid`. |
 
 ## Технології
 - HTML

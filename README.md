@@ -16,6 +16,7 @@
 | 08 | Tooltip Hover | Підказка з’являється при наведенні на кнопку. |
 | 09 | CSS Variables Buttons | Темна/Світла кнопка на CSS змінних. |
 | 10 | Clip-Path Card | Card з хвилястим краєм через clip-path. |
+| 11 | Animated Wave | Анімована хвиля через clip-path. |
 
 ## Технології
 - HTML

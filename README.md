@@ -17,6 +17,7 @@
 | 09 | CSS Variables Buttons | Темна/Світла кнопка на CSS змінних. |
 | 10 | Clip-Path Card | Card з хвилястим краєм через clip-path. |
 | 11 | Animated Wave | Анімована хвиля через clip-path. |
+| 12 | Clip Path Avatar | Круглий аватар через clip-path. |
 
 ## Технології
 - HTML

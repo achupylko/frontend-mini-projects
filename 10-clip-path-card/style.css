@@ -1,0 +1,37 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #7fdbff 0%, #0074d9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.wave-card {
+    width: 320px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.09);
+    overflow: hidden;
+}
+
+/* Верхній блок з "хвилею" */
+.wave-img {
+    height: 120px;
+    background: linear-gradient(100deg, #39c0ed 60%, #0074d9 100%);
+    /* Хвиля через clip-path */
+    clip-path: polygon(0 0, 100% 0, 100% 75%,
+            75% 100%, 50% 90%, 25% 100%, 0 80%);
+}
+
+/* Контент картки */
+.wave-content {
+    padding: 24px;
+}
+
+.wave-content h3 {
+    margin-top: 0;
+    color: #0074d9;
+    font-weight: 700;
+}

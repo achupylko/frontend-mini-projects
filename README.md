@@ -19,6 +19,7 @@
 | 11 | Animated Wave | Анімована хвиля через clip-path. |
 | 12 | Clip Path Avatar | Круглий аватар через clip-path. |
 | 13 | Scroll Snap Slider | Горизонтальний слайдер із плавним “прилипанням” слайдів до центру. |
+| 14 | Glassmorphism Card | Скляна картка (Glassmorphism) через backdrop-filter. |
 
 ## Технології
 - HTML

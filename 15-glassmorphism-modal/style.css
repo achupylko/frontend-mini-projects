@@ -1,0 +1,108 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background: linear-gradient(120deg, #ffecd2 0%, #fcb69f 100%);
+    transition: filter 0.3s;
+}
+
+/* Основний контент */
+.main-content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+}
+
+/* Кнопка відкриття */
+#open-modal {
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    background: #fa709a;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 12px rgba(250, 112, 154, 0.18);
+    transition: background 0.2s;
+}
+
+#open-modal:hover {
+    background: #ffecd2;
+    color: #fa709a;
+}
+
+/* Задній розмитий фон */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+/* Модальне вікно */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, -50%) scale(0.97);
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.16);
+    padding: 32px 28px 22px;
+    width: 340px;
+    max-width: 95vw;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(6px) saturate(120%);
+    -webkit-backdrop-filter: blur(6px) saturate(120%);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.modal h2 {
+    margin-top: 0;
+    color: #fa709a;
+}
+
+.modal p {
+    color: #222;
+}
+
+/* Кнопка закриття */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fa709a;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #e14071;
+}
+
+/* Показати модалку */
+body.modal-open .modal-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+body.modal-open .modal {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}

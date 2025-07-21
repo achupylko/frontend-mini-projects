@@ -1,0 +1,68 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #8fd3f4, #84fab0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+/* Контейнер для перемикача */
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Приховуємо стандартний чекбокс */
+.toggle-switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+/* Стилізуємо "тумблер" */
+.slider {
+    width: 54px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 18px;
+    position: relative;
+    transition: background 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: inline-block;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+/* Активний стан */
+.toggle-switch input:checked+.slider {
+    background: #4ed164;
+}
+
+.toggle-switch input:checked+.slider::before {
+    transform: translateX(24px);
+    background: #e6fdeb;
+}
+
+/* Текст перемикача */
+.toggle-label {
+    font-size: 1.08rem;
+    color: #2d4636;
+    letter-spacing: 0.5px;
+}

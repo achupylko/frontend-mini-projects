@@ -21,6 +21,7 @@
 | 13 | Scroll Snap Slider | Горизонтальний слайдер із плавним “прилипанням” слайдів до центру. |
 | 14 | Glassmorphism Card | Скляна картка (Glassmorphism) через backdrop-filter. |
 | 15 | Glassmorphism Modal | Модальне вікно з блюром фону. |
+| 16 | Toggle Switch | Анімований Toggle Switch (чекбокс-перемикач). |
 
 ## Технології
 - HTML

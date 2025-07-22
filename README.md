@@ -22,6 +22,7 @@
 | 14 | Glassmorphism Card | Скляна картка (Glassmorphism) через backdrop-filter. |
 | 15 | Glassmorphism Modal | Модальне вікно з блюром фону. |
 | 16 | Toggle Switch | Анімований Toggle Switch (чекбокс-перемикач). |
+| 17 | Card Flip Effect | Перевертається на hover або tap (CSS-only). |
 
 ## Технології
 - HTML

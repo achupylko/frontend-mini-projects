@@ -24,6 +24,7 @@
 | 16 | Toggle Switch | Анімований Toggle Switch (чекбокс-перемикач). |
 | 17 | Card Flip Effect | Перевертається на hover або tap (CSS-only). |
 | 18 | Scroll Animated Counter | Анімований лічильник для статистики. |
+| 19 | Hamburger Menu | Hamburger Menu з анімацією та блюром фону |
 
 ## Технології
 - HTML

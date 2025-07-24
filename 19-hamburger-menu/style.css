@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: linear-gradient(120deg, #c471f5, #fa71cd 100%);
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 28px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(6px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #7b2ff2;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.hamburger {
+    width: 42px;
+    height: 42px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 110;
+    transition: opacity 0.3s;
+}
+
+.hamburger span {
+    display: block;
+    width: 32px;
+    height: 4px;
+    background: #7b2ff2;
+    border-radius: 2px;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Анімація перетворення на хрестик */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(9px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-9px);
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 100;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Бокове меню */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: -6px 0 18px rgba(123, 47, 242, 0.10);
+    z-index: 120;
+    padding: 60px 30px 30px 30px;
+    transition: right 0.33s cubic-bezier(.68, -0.55, .27, 1.55);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.side-menu.active {
+    right: 0;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.side-menu li {
+    margin-bottom: 22px;
+}
+
+.side-menu a {
+    color: #7b2ff2;
+    font-size: 1.15rem;
+    text-decoration: none;
+    letter-spacing: 0.7px;
+    transition: color 0.2s;
+}
+
+.side-menu a:hover {
+    color: #fa71cd;
+}

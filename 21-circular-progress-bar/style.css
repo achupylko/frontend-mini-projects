@@ -1,0 +1,75 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #a8edea, #fed6e3 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.circular-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255,255,255,0.96);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.11);
+  padding: 36px 26px 30px;
+}
+
+.circular-progress {
+  --size: 130px;
+  --thickness: 16px;
+  --bg: #eee;
+  --color: #f7971e;
+  --percent: 65; /* або інший відсоток */
+
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    conic-gradient(var(--color) calc(var(--percent) * 1%), var(--bg) 0 100%);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(247,151,30,0.11);
+  animation: fillCircle 1.5s cubic-bezier(.4,2,.3,1) forwards;
+}
+
+@keyframes fillCircle {
+  from {
+    background: conic-gradient(var(--color) 0%, var(--bg) 0 100%);
+  }
+  to {
+    background: conic-gradient(var(--color) calc(var(--percent) * 1%), var(--bg) 0 100%);
+  }
+}
+
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  width: calc(var(--size) - var(--thickness)*2);
+  height: calc(var(--size) - var(--thickness)*2);
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.circular-label {
+  position: absolute;
+  z-index: 2;
+  font-size: 1.45rem;
+  font-weight: bold;
+  color: #f7971e;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circular-desc {
+  margin-top: 20px;
+  color: #f7971e;
+  font-weight: 500;
+  font-size: 1.07rem;
+}

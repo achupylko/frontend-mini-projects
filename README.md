@@ -27,6 +27,7 @@
 | 19 | Hamburger Menu | Hamburger Menu з анімацією та блюром фону |
 | 20 | Animated Progress Bar | Анімований Progress Bar |
 | 21 | Circular Progress Bar | CSS Circular Progress Bar (круговий прогрес-бар) |
+| 22 | CSS Accordion | Accordion на чистому CSS |
 
 ## Технології
 - HTML

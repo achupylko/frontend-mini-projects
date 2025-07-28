@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: linear-gradient(120deg, #fffde4 0%, #005bea 100%);
+}
+
+/* Хедер із хвилею */
+.wave-header {
+    position: relative;
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    min-height: 270px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.header-content {
+    z-index: 1;
+    position: relative;
+    padding: 58px 24px 44px;
+    text-align: center;
+    color: #225f3e;
+}
+
+.header-content h1 {
+    margin: 0 0 14px 0;
+    font-size: 2.3rem;
+    letter-spacing: 1px;
+}
+
+.header-content p {
+    font-size: 1.17rem;
+    margin: 0;
+}
+
+.wave-svg {
+    display: block;
+    width: 100vw;
+    height: 120px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+/* Анімація SVG-хвилі */
+@keyframes waveMove {
+    0% {
+        d: path("M0,60 Q360,0 720,60 T1920,60 V120 H0 Z");
+    }
+
+    50% {
+        d: path("M0,60 Q360,100 720,60 T1920,60 V120 H0 Z");
+    }
+
+    100% {
+        d: path("M0,60 Q360,0 720,60 T1920,60 V120 H0 Z");
+    }
+}
+
+.wave-svg #wave {
+    animation: waveMove 5s ease-in-out infinite;
+}

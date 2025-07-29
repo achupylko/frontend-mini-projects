@@ -29,6 +29,7 @@
 | 21 | Circular Progress Bar | CSS Circular Progress Bar (круговий прогрес-бар) |
 | 22 | CSS Accordion | Accordion на чистому CSS |
 | 23 | Animated SVG Wave | Анімована SVG-хвиля для хедеру |
+| 24 | Zoom & Blur Image Hover Effect | Картинка плавно збільшується і розмивається при наведенні. |
 
 ## Технології
 - HTML

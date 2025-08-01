@@ -32,6 +32,7 @@
 | 24  | Zoom & Blur Image Hover Effect      | Картинка плавно збільшується і розмивається при наведенні.         |
 | 25  | Animated Gradient Text              | Анімований градієнтний текст (Gradient Text Animation)             |
 | 26  | Skeleton Loader                     | Skeleton Loader (CSS скелетон-загрузка)                            |
+| 27  | Glassmorphism Card                  | Glassmorphism Card (CSS матове скло)                               |
 
 ## Технології
 

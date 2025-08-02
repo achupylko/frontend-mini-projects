@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(120deg, #d0eaff 0%, #e3ffe7 100%);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tilt-container {
+  perspective: 1000px; /* Глибина 3D ефекту */
+}
+
+.tilt-card {
+  width: 300px;
+  padding: 36px 26px;
+  border-radius: 18px;
+  background: #ffffffcc;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+.tilt-card:hover {
+  transform: rotateY(12deg) rotateX(8deg);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+.tilt-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.7rem;
+}
+
+.tilt-card p {
+  color: #333;
+  font-size: 1rem;
+}

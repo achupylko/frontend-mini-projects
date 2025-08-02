@@ -33,6 +33,7 @@
 | 25  | Animated Gradient Text              | Анімований градієнтний текст (Gradient Text Animation)             |
 | 26  | Skeleton Loader                     | Skeleton Loader (CSS скелетон-загрузка)                            |
 | 27  | Glassmorphism Card                  | Glassmorphism Card (CSS матове скло)                               |
+| 28  | Tilt on Hover                       | Tilt on Hover (CSS 3D нахил при наведенні)                         |
 
 ## Технології
 

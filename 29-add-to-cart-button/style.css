@@ -1,0 +1,42 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(120deg, #ffecd2, #fcb69f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.cart-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.15rem;
+  padding: 14px 28px;
+  background: #ff7043;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.cart-btn:hover {
+  background: #ff5722;
+  transform: scale(1.03);
+}
+
+.cart-btn.clicked {
+  background: #4caf50;
+}
+
+.cart-btn .icon {
+  font-size: 1.4rem;
+  transition: transform 0.3s;
+}
+
+.cart-btn.clicked .icon {
+  transform: rotate(360deg);
+}

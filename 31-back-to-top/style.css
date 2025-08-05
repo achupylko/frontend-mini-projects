@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(120deg, #fdfcfb, #e2d1c3);
+  scroll-behavior: smooth;
+}
+
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background-color: #7b2ff2;
+  color: white;
+  font-size: 1.6rem;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 100;
+}
+
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}

@@ -1,0 +1,120 @@
+/* Базові стилі */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: linear-gradient(120deg, #fdfbfb, #ebedee);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* Карточка з вкладками */
+.tabs {
+  width: 720px;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  padding: 18px;
+}
+
+/* Приховуємо радіо */
+.tabs > input[type="radio"] {
+  display: none;
+}
+
+/* Хедер вкладок */
+.tab-labels {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-bottom: 1px solid #eceff3;
+}
+
+.tab-labels label {
+  text-align: center;
+  padding: 14px 10px;
+  cursor: pointer;
+  color: #636e7b;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.tab-labels label:hover {
+  color: #2b4cff;
+}
+
+/* Індикатор активної вкладки */
+.tab-indicator {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  width: calc(100% / 3);
+  background: #2b4cff;
+  border-radius: 3px 3px 0 0;
+  transition: transform 0.3s cubic-bezier(0.45, 0.1, 0.25, 1);
+}
+
+/* Контент вкладок */
+.tab-content {
+  display: none;
+  padding: 18px 6px 6px;
+  animation: fade 0.25s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Логіка перемикання через :checked */
+#tab1:checked ~ .tab-labels label[for="tab1"],
+#tab2:checked ~ .tab-labels label[for="tab2"],
+#tab3:checked ~ .tab-labels label[for="tab3"] {
+  color: #2b4cff;
+}
+
+#tab1:checked ~ .tab-labels .tab-indicator {
+  transform: translateX(0%);
+}
+#tab2:checked ~ .tab-labels .tab-indicator {
+  transform: translateX(100%);
+}
+#tab3:checked ~ .tab-labels .tab-indicator {
+  transform: translateX(200%);
+}
+
+#tab1:checked ~ .tab-content[data-tab="1"],
+#tab2:checked ~ .tab-content[data-tab="2"],
+#tab3:checked ~ .tab-content[data-tab="3"] {
+  display: block;
+}
+
+/* Адаптивність */
+@media (max-width: 520px) {
+  .tab-labels label {
+    padding: 12px 6px;
+    font-size: 0.95rem;
+  }
+  .tab-content {
+    padding: 14px 2px 2px;
+  }
+}

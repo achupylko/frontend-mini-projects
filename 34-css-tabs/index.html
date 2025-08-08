@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tabs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="tabs">
+      <!-- Радіо-кнопки (приховані) -->
+      <input type="radio" name="tab" id="tab1" checked />
+      <input type="radio" name="tab" id="tab2" />
+      <input type="radio" name="tab" id="tab3" />
+
+      <!-- Заголовки вкладок -->
+      <div class="tab-labels">
+        <label for="tab1">Огляд</label>
+        <label for="tab2">Характеристики</label>
+        <label for="tab3">Відгуки</label>
+        <span class="tab-indicator" aria-hidden="true"></span>
+      </div>
+
+      <!-- Контент -->
+      <div class="tab-content" data-tab="1">
+        <h3>Огляд</h3>
+        <p>
+          Лаконічні вкладки на чистому CSS: жодного JS — лиш селектори та
+          транзішни.
+        </p>
+      </div>
+      <div class="tab-content" data-tab="2">
+        <h3>Характеристики</h3>
+        <ul>
+          <li>Чистий HTML + CSS</li>
+          <li>Плавний індикатор</li>
+          <li>Адаптивний макет</li>
+        </ul>
+      </div>
+      <div class="tab-content" data-tab="3">
+        <h3>Відгуки</h3>
+        <p>
+          “Працює як годинник, і без єдиного рядка JS!” — Хтось дуже задоволений
+          😊
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

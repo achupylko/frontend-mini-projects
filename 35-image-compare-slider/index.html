@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before / After Slider</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="compare-card">
+      <h2>До / Після</h2>
+
+      <div class="compare">
+        <!-- Базова (до) -->
+        <img
+          class="img img--after"
+          src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1200&q=80"
+          alt="Пейзаж: початкове зображення"
+        />
+
+        <!-- Верхня (після) -->
+        <img
+          class="img img--before"
+          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+          alt="Пейзаж: оброблене зображення"
+        />
+
+        <!-- Повзунок -->
+        <input
+          aria-label="Порівняння до/після"
+          class="slider"
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+        />
+
+        <!-- Ручка по центру -->
+        <div class="handle" aria-hidden="true">
+          <span class="handle-line"></span>
+          <span class="handle-dot"></span>
+        </div>
+      </div>
+
+      <div class="labels">
+        <span>До</span>
+        <span>Після</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

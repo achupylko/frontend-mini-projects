@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Progress Bar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Прогрес-бар -->
+    <div class="progress-wrapper" aria-hidden="true">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <header class="page-header">
+      <h1>Стаття: Як працює прогрес прокрутки</h1>
+      <p class="subtitle">UX-патерн для довгих текстів та блогів</p>
+    </header>
+
+    <main class="content">
+      <!-- Демоконтент для прокрутки -->
+      <section>
+        <h2>Вступ</h2>
+        <p>
+          Цей приклад показує, як зробити індикатор прогресу читання. Коли ти
+          скролиш сторінку, смужка зверху заповнюється від 0% до 100%.
+        </p>
+      </section>
+      <section>
+        <h2>Навіщо</h2>
+        <p>
+          Краще сприйняття довжини контенту, орієнтація читача, підвищення
+          залученості.
+        </p>
+      </section>
+      <section>
+        <h2>Приклад контенту</h2>
+        <p>Щоб було де скролити, нижче йде псевдоконтент.</p>
+        <div class="filler"></div>
+        <div class="filler"></div>
+        <div class="filler"></div>
+        <div class="filler"></div>
+        <div class="filler"></div>
+      </section>
+      <section>
+        <h2>Висновок</h2>
+        <p>Простий JS + CSS — і в тебе є зручний індикатор прогресу.</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

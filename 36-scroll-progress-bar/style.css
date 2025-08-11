@@ -1,0 +1,77 @@
+/* Базові стилі */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --accent: #2b4cff;
+  --bg: #f6f7fb;
+}
+
+/* Прогрес-бар зверху */
+.progress-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: transparent;
+  z-index: 1000;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), #7f9dff);
+  box-shadow: 0 0 12px rgba(43, 76, 255, 0.35);
+  transform-origin: left center;
+  transition: width 0.08s linear; /* швидкий, але плавний апдейт */
+}
+
+/* Хедер/контент */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: #1f2937;
+}
+
+.page-header {
+  padding: 64px 20px 28px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 6px; /* нижче прогрес-бару */
+  z-index: 10;
+}
+
+.page-header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: #0f172a;
+}
+.subtitle {
+  margin: 0;
+  color: #6b7280;
+}
+
+.content {
+  max-width: 820px;
+  margin: 24px auto;
+  padding: 0 16px 80px;
+}
+
+.content h2 {
+  margin-top: 28px;
+}
+
+.filler {
+  height: 380px;
+  margin: 16px 0;
+  border-radius: 12px;
+  background: linear-gradient(120deg, #ffffff, #eef2ff);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}

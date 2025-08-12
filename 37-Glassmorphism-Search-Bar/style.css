@@ -1,0 +1,194 @@
+/* ===== Base & theme ===== */
+:root {
+  --bg: linear-gradient(135deg, #111827, #1f2937);
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --ring: #60a5fa;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.demo {
+  width: min(680px, 100%);
+}
+
+/* ===== A11Y helpers ===== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===== Search widget ===== */
+.search {
+  display: grid;
+  gap: 10px;
+}
+
+/* Glass container */
+.search__inner {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  align-items: center;
+  gap: 10px;
+
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+
+  /* frosted glass */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  padding: 10px 12px;
+  width: min(560px, 92vw);
+  transition: box-shadow 180ms ease, border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+/* expand/contract emphasis states */
+.search__inner:focus-within {
+  border-color: rgba(96, 165, 250, 0.5);
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.25), var(--shadow);
+}
+
+.search__icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--muted);
+  opacity: 0.85;
+}
+
+.search__input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 6px 0;
+  caret-color: var(--ring);
+}
+
+.search__input::placeholder {
+  color: var(--muted);
+}
+
+.search__input:focus {
+  /* visible focus ring for accessibility */
+  outline: none;
+}
+
+.search__clear {
+  display: inline-grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  padding: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search__clear svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--muted);
+}
+
+.search__clear:hover svg,
+.search__clear:focus-visible svg {
+  fill: var(--text);
+}
+
+.search__clear:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* ===== Suggestions ===== */
+.suggestions {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  width: min(560px, 92vw);
+
+  /* animated reveal */
+  transform-origin: top;
+  transform: scaleY(0.98);
+  opacity: 0;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.suggestions[data-open="true"] {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.suggestions__item {
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.suggestions__item[aria-selected="true"],
+.suggestions__item:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Divider between items */
+.suggestions__item + .suggestions__item {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ===== Motion preferences ===== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
